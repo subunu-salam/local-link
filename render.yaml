@@ -1,0 +1,27 @@
+# Render Blueprint — deploys Local Link as a FREE web service.
+# In Render: New + → Blueprint → connect this repo. It reads this file automatically.
+#
+# NOTE: Render's free tier has an ephemeral filesystem, so the SQLite database
+# re-seeds itself automatically on each cold start. That's perfect for a live
+# demo. To persist data permanently, either upgrade the service and add a Render
+# Disk mounted at /var/data (then set DATABASE_FILE=/var/data/local-link.db),
+# or attach a Render PostgreSQL instance.
+services:
+  - type: web
+    name: local-link
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true          # Render generates a strong secret
+      - key: OPENAI_API_KEY
+        sync: false                  # set your own key in the dashboard (optional)
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: GOOGLE_PLACES_API_KEY
+        sync: false                  # set your own key to enable live "Import from Google"
+      - key: NODE_VERSION
+        value: "20"

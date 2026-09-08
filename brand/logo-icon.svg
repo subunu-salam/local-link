@@ -1,0 +1,42 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Local Link icon">
+  <defs>
+    <linearGradient id="ll-bg" x1="96" y1="48" x2="416" y2="472" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14B8A6"/>
+      <stop offset="0.55" stop-color="#0D9488"/>
+      <stop offset="1" stop-color="#0B5A55"/>
+    </linearGradient>
+    <linearGradient id="ll-mark" x1="180" y1="150" x2="340" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0EA5A4"/>
+      <stop offset="1" stop-color="#0B5A55"/>
+    </linearGradient>
+    <radialGradient id="ll-glow" cx="0.3" cy="0.22" r="0.95">
+      <stop offset="0" stop-color="#7FFFE9" stop-opacity="0.5"/>
+      <stop offset="0.55" stop-color="#7FFFE9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- tile -->
+  <rect x="8" y="8" width="496" height="496" rx="116" fill="url(#ll-bg)"/>
+  <rect x="8" y="8" width="496" height="496" rx="116" fill="url(#ll-glow)"/>
+
+  <!-- soft shadow -->
+  <path d="M256 106 C320 106 372 158 372 222 C372 302 300 372 256 428 C212 372 140 302 140 222 C140 158 192 106 256 106 Z"
+        fill="#05322F" opacity="0.25" transform="translate(0,12)"/>
+
+  <!-- white pin body -->
+  <path d="M256 106 C320 106 372 158 372 222 C372 302 300 372 256 428 C212 372 140 302 140 222 C140 158 192 106 256 106 Z"
+        fill="#FFFFFF"/>
+
+  <!-- interlocking chain-link mark (two diagonally offset rounded rings) -->
+  <g fill="none" stroke-linecap="round">
+    <!-- back ring (lower-right) -->
+    <circle cx="285" cy="238" r="42" stroke="#0B5A55" stroke-width="25"/>
+    <!-- front ring (upper-left), with a small gap so it reads as passing through -->
+    <circle cx="231" cy="198" r="42" stroke="url(#ll-mark)" stroke-width="25"/>
+    <!-- re-assert front ring over the crossing to create the interlock -->
+    <path d="M262 227 A42 42 0 0 1 201 227" stroke="url(#ll-mark)" stroke-width="25" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- accent spark node -->
+  <circle cx="231" cy="198" r="11" fill="#FF7A59"/>
+</svg>

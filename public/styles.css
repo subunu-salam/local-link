@@ -1299,3 +1299,44 @@ body.dark .device-outline,
   border-color: #ffffff !important;
   stroke: #ffffff !important;
 }
+
+/* --- Fix 1: Admin Panel Full-Screen Layout --- */
+body, html {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+/* Expand main containers, dashboards, and wrappers to full width */
+#root, #app, .app, .admin-layout, .dashboard-layout, main, .main-content, .container, [class*="admin"], [class*="dashboard"] {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* --- Fix 2: Customer App Dark Mode Phone Visibility --- */
+body.dark .phone-container,
+body.dark .mobile-frame,
+body.dark .phone-wrapper,
+body.dark .device-frame,
+.dark body .phone-container,
+.dark body .mobile-frame,
+.dark-mode .phone-container,
+.dark-mode .mobile-frame,
+[data-theme="dark"] .phone-container,
+[data-theme="dark"] .mobile-frame {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4) !important;
+  border: 4px solid #ffffff !important;
+}
+
+/* Ensure phone screen content remains visible and legible in dark mode */
+body.dark .phone-container *, 
+.dark-mode .phone-container *,
+[data-theme="dark"] .phone-container * {
+  color: inherit;
+}

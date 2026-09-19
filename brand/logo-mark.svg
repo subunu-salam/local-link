@@ -1,0 +1,17 @@
+<svg width="320" height="360" viewBox="0 0 320 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Local Link mark">
+  <defs>
+    <linearGradient id="m-grad" x1="70" y1="20" x2="250" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#0B5A55"/>
+    </linearGradient>
+  </defs>
+  <!-- pin body -->
+  <path d="M160 20 C224 20 276 72 276 138 C276 222 200 296 160 344 C120 296 44 222 44 138 C44 72 96 20 160 20 Z" fill="url(#m-grad)"/>
+  <!-- interlocking rings (white) -->
+  <g fill="none" stroke-linecap="round">
+    <circle cx="189" cy="156" r="42" stroke="#FFFFFF" stroke-width="25" opacity="0.55"/>
+    <circle cx="135" cy="116" r="42" stroke="#FFFFFF" stroke-width="25"/>
+    <path d="M166 145 A42 42 0 0 1 105 145" stroke="#FFFFFF" stroke-width="25" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="135" cy="116" r="11" fill="#FF7A59"/>
+</svg>

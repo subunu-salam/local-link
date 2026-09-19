@@ -1264,3 +1264,38 @@ body[data-app="customer"] .promorow::-webkit-scrollbar{display:none}
 .intro-btns{display:flex;align-items:center;gap:12px;width:100%;max-width:340px;justify-content:center}
 .intro-btns .intro-cta{flex:1;max-width:220px}
 .intro-cta.shine{background:linear-gradient(135deg,#17B6A6 0%,#0C8F82 55%,#0A5C55 100%);color:#fff;border:none;box-shadow:0 8px 20px -8px rgba(12,143,130,.6)}
+
+/* --- Admin Panel Full-Screen Fix --- */
+.admin-container, 
+.admin-wrapper, 
+.admin-main-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Ensure body and html take up full viewport width */
+body.admin-page, html.admin-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* --- Customer App Dark Mode Phone Visibility Fix --- */
+body.dark .phone-mockup, 
+body.dark .phone-frame,
+body.dark img[src*="phone"],
+.dark-mode .phone-mockup, 
+.dark-mode .phone-frame,
+.dark-mode img[src*="phone"] {
+  filter: brightness(0) invert(1);
+}
+
+body.dark .device-outline,
+.dark-mode .device-outline {
+  border-color: #ffffff !important;
+  stroke: #ffffff !important;
+}
